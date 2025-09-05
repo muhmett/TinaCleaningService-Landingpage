@@ -56,13 +56,13 @@
       box-shadow:0 8px 24px rgba(0,114,255,.35)
     }
 
-    /* Hero */
+    /* Hero - CORRECTION APPLIQUÉE ICI */
     .hero{
       min-height:92vh; display:grid; place-items:center; text-align:center; color:#fff;
       background:
         linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
-        /* REPLACE with your own hero image in /assets/ */
-        url('/images/hero.jpg') center/cover no-repeat;
+        /* Chemin relatif corrigé + image de secours */
+        url('images/hero.jpg') center/cover no-repeat,
       padding:6rem 1.5rem 4rem;
       position:relative;
     }
@@ -73,7 +73,7 @@
       pointer-events:none;
     }
     .hero h1{font-size:clamp(2rem,5vw,3.5rem); color:#fff}
-    .hero p{opacity:5%; max-width:820px; margin:1rem auto 1.5rem; font-size:1.1rem}
+    .hero p{opacity:0.85; max-width:820px; margin:1rem auto 1.5rem; font-size:1.1rem}
     .domain-badge{
       display:inline-block; margin:1rem 0 1.5rem; padding:.9rem 1.4rem; border-radius:var(--radius);
       border:2px solid rgba(255,255,255,.7); background:rgba(255,255,255,.08);
@@ -172,8 +172,8 @@
   <header>
     <div class="container header-wrap">
       <div class="brand">
-        <!-- REMPLACE le chemin par ton logo: /assets/tina-logo.svg ou .png -->
-        <img src="/assets/tina-logo.svg" alt="Tina Cleaning Logo" onerror="this.src='/images/logo.png'">
+        <!-- Chemin relatif pour le logo -->
+        <img src="images/logo.png" alt="Tina Cleaning Logo">
         <span>TinaCleaningService.com</span>
       </div>
       <nav aria-label="Primary">
@@ -193,7 +193,7 @@
   <section class="hero" role="banner">
     <div class="container">
       <h1>The Perfect Domain For Your Cleaning Business</h1>
-      <p>Upgrade your online presence with a premium, futuristic domain that’s memorable, clean, and built to convert.</p>
+      <p>Upgrade your online presence with a premium, futuristic domain that's memorable, clean, and built to convert.</p>
       <div class="domain-badge">TinaCleaningService.com</div>
       <div class="btns">
         <a class="btn btn-primary" href="#cta"><i class="fa-solid fa-bolt"></i> Secure This Domain</a>
@@ -230,7 +230,7 @@
     </div>
   </section>
 
-  <!-- Path (emplacement demandé + chemin) -->
+  <!-- Path -->
   <section class="path" id="path">
     <div class="container">
       <div class="title">
@@ -390,6 +390,3 @@
   </script>
 </body>
 </html>
-
-
-
